@@ -3,20 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gupta Chess Academy | Learn Today. Lead Tomorrow.</title>
+<title>Gupta Chess Academy | Best Chess Classes in Bangalore – Singasandra, HSR Layout</title>
+<meta name="description" content="Gupta Chess Academy – Expert chess coaching for all ages in Singasandra, Bangalore 560068. Beginner to tournament-level classes. Free demo class available. Call +91 86608 13472.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#16233A;
-  --navy-deep:#0F1A2B;
-  --cream:#FBF6EC;
-  --cream-2:#F3EBDC;
-  --gold:#C6982F;
-  --gold-light:#E3BE6C;
-  --ink:#22201B;
-  --ink-soft:#5C574D;
-  --white:#FFFFFF;
+  --navy:#16233A; --navy-deep:#0F1A2B;
+  --cream:#FBF6EC; --cream-2:#F3EBDC;
+  --gold:#C6982F; --gold-light:#E3BE6C;
+  --ink:#22201B; --ink-soft:#5C574D;
+  --white:#FFFFFF; --green:#2E7D32;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -26,18 +23,17 @@ a{text-decoration:none;color:inherit;}
 img{display:block;max-width:100%;}
 .container{max-width:1200px;margin:0 auto;padding:0 24px;}
 .eyebrow{display:inline-block;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px;}
-.section-head{text-align:center;max-width:640px;margin:0 auto 48px;}
-.section-title{font-size:2rem;margin-bottom:8px;}
-.rule{width:48px;height:2px;background:var(--gold);margin:14px auto 0;}
+.section-head{text-align:center;max-width:700px;margin:0 auto 52px;}
+.section-title{font-size:2rem;margin-bottom:10px;}
+.section-sub{color:var(--ink-soft);font-size:.95rem;}
+.rule{width:48px;height:2px;background:var(--gold);margin:14px auto 16px;}
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 26px;border-radius:8px;font-weight:600;font-size:.92rem;border:1.5px solid transparent;cursor:pointer;transition:all .2s ease;white-space:nowrap;}
 .btn-gold{background:var(--gold);color:var(--navy-deep);}
 .btn-gold:hover{background:var(--gold-light);}
 .btn-outline{border-color:var(--navy);color:var(--navy);background:transparent;}
 .btn-outline:hover{background:var(--navy);color:var(--white);}
-.btn-outline-white{border-color:rgba(255,255,255,.6);color:var(--white);background:transparent;}
-.btn-outline-white:hover{background:rgba(255,255,255,.15);}
-.btn-outline-light{border-color:rgba(255,255,255,.5);color:var(--white);background:transparent;}
-.btn-outline-light:hover{background:rgba(255,255,255,.12);border-color:var(--white);}
+.btn-outline-light{border-color:rgba(255,255,255,.55);color:var(--white);background:transparent;}
+.btn-outline-light:hover{background:rgba(255,255,255,.12);}
 
 /* ── NAV ── */
 header{position:sticky;top:0;z-index:100;background:rgba(251,246,236,.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(22,35,58,.08);}
@@ -56,161 +52,142 @@ header{position:sticky;top:0;z-index:100;background:rgba(251,246,236,.95);backdr
 .mobile-nav.open{display:flex;}
 .mobile-nav a{display:block;padding:10px 0;font-size:.95rem;font-weight:500;color:var(--ink);border-bottom:1px solid rgba(22,35,58,.06);}
 .mobile-nav a:hover{color:var(--gold);}
-.mobile-nav a:last-child{border-bottom:none;}
 
-/* ════════════════════════════════
-   HERO — two column: text left, full image right
-════════════════════════════════ */
-.hero{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  min-height:88vh;
-  overflow:hidden;
-}
-.hero-left{
-  background:linear-gradient(135deg,var(--cream) 0%,var(--cream-2) 100%);
-  display:flex;align-items:center;
-  padding:72px 56px 72px 5%;
-}
+/* ── HERO — split layout ── */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:90vh;overflow:hidden;}
+.hero-left{background:linear-gradient(145deg,var(--cream) 0%,var(--cream-2) 100%);display:flex;align-items:center;padding:72px 56px 72px 5%;}
 .hero-left-inner{max-width:520px;}
-.hero-left-inner .eyebrow{margin-bottom:14px;}
-.hero-left-inner h1{font-size:3rem;letter-spacing:-.01em;margin-bottom:18px;}
-.hero-left-inner h1 .accent{color:var(--gold);font-style:italic;}
-.hero-left-inner p{color:var(--ink-soft);font-size:1rem;margin-bottom:30px;max-width:420px;}
+.hero-badge-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(198,152,47,.12);border:1px solid rgba(198,152,47,.3);color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:.08em;padding:6px 14px;border-radius:30px;margin-bottom:18px;}
+.hero-left-inner h1{font-size:3rem;letter-spacing:-.01em;margin-bottom:10px;}
+.hero-left-inner h1 em{color:var(--gold);font-style:italic;display:block;}
+.hero-left-inner p{color:var(--ink-soft);font-size:1rem;margin-bottom:30px;max-width:440px;}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px;}
-.hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 24px;border-top:1px solid rgba(22,35,58,.1);padding-top:24px;}
-.hero-stats div{font-size:.78rem;color:var(--ink-soft);font-weight:500;}
-.hero-stats strong{display:block;font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--navy);margin-bottom:2px;}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;border-top:1px solid rgba(22,35,58,.1);padding-top:22px;}
+.hero-stats div{font-size:.76rem;color:var(--ink-soft);font-weight:500;}
+.hero-stats strong{display:block;font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);margin-bottom:2px;}
+.hero-right{position:relative;background:url('images/hero-chess.jpg') center center/cover no-repeat;}
+.hero-right::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,26,43,.45) 0%,rgba(15,26,43,.65) 100%);}
+.live-badge{position:absolute;bottom:28px;left:28px;z-index:2;background:rgba(251,246,236,.96);padding:10px 16px;border-radius:9px;display:flex;align-items:center;gap:9px;font-size:.8rem;font-weight:600;color:var(--navy);box-shadow:0 8px 24px rgba(15,26,43,.18);}
+.live-badge .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;flex-shrink:0;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
-/* RIGHT SIDE — pure background image */
-.hero-right{
-  position:relative;
-  background:url('images/hero-chess.jpg') center center / cover no-repeat;
-}
-.hero-right::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(15,26,43,.45) 0%,rgba(15,26,43,.65) 100%);
-}
-.hero-badge{
-  position:absolute;bottom:28px;left:28px;z-index:2;
-  background:rgba(251,246,236,.95);
-  padding:11px 18px;border-radius:10px;
-  display:flex;align-items:center;gap:10px;
-  font-size:.82rem;font-weight:600;color:var(--navy);
-  box-shadow:0 8px 24px rgba(15,26,43,.18);
-}
-.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;}
-
-/* ════════════════════════════════
-   SERVICES
-════════════════════════════════ */
+/* ── SERVICES ── */
 .services{padding:90px 0 80px;}
 .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
 .service-card{background:var(--white);border:1px solid rgba(22,35,58,.08);border-radius:14px;padding:30px 22px;text-align:center;transition:transform .25s,box-shadow .25s;}
 .service-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px -16px rgba(22,35,58,.22);}
 .service-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:1.4rem;}
-.service-card h3{font-size:1.08rem;margin-bottom:8px;}
+.service-card h3{font-size:1.05rem;margin-bottom:8px;}
 .service-card p{font-size:.86rem;color:var(--ink-soft);}
 
-/* ════════════════════════════════
-   ABOUT — text left, full image right
-════════════════════════════════ */
-.about{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  min-height:600px;
-  overflow:hidden;
-}
-.about-left{
-  background:var(--white);
-  display:flex;align-items:center;
-  padding:80px 56px 0 5%;
-}
-.about-left-inner{max-width:500px;padding-bottom:80px;}
-.about-left-inner .eyebrow{margin-bottom:12px;}
-.about-left-inner h2{font-size:2.2rem;margin-bottom:18px;}
+/* ── ABOUT ── */
+.about{display:grid;grid-template-columns:1fr 1fr;min-height:560px;overflow:hidden;}
+.about-left{background:var(--white);display:flex;align-items:center;padding:80px 56px 80px 5%;}
+.about-left-inner{max-width:500px;}
+.about-left-inner h2{font-size:2.1rem;margin-bottom:16px;}
 .about-left-inner h2 .accent{color:var(--gold);font-style:italic;}
-.about-left-inner p{color:var(--ink-soft);margin-bottom:22px;}
+.about-left-inner p{color:var(--ink-soft);margin-bottom:22px;font-size:.95rem;}
 .check-list{list-style:none;margin-bottom:28px;}
-.check-list li{display:flex;align-items:center;gap:11px;margin-bottom:13px;font-weight:500;color:var(--navy);font-size:.92rem;}
+.check-list li{display:flex;align-items:center;gap:11px;margin-bottom:12px;font-weight:500;color:var(--navy);font-size:.92rem;}
 .check-list .tick{width:21px;height:21px;border-radius:50%;background:var(--gold);color:var(--navy-deep);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;flex-shrink:0;}
+.about-right{position:relative;background:url('images/about-chess.jpg') center center/cover no-repeat;}
+.about-right::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,26,43,.4) 0%,rgba(15,26,43,.65) 100%);}
 
-/* RIGHT SIDE — pure background image */
-.about-right{
-  position:relative;
-  background:url('images/about-chess.jpg') center center / cover no-repeat;
-}
-.about-right::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(15,26,43,.4) 0%,rgba(15,26,43,.65) 100%);
-}
-
-/* ── STAT BAR (sits below about) ── */
-.stat-bar{background:var(--navy);display:grid;grid-template-columns:repeat(4,1fr);padding:30px 16px;box-shadow:0 -4px 24px rgba(15,26,43,.15);}
+/* ── STAT BAR ── */
+.stat-bar{background:var(--navy);display:grid;grid-template-columns:repeat(4,1fr);padding:30px 16px;}
 .stat-bar .stat{text-align:center;color:var(--cream);border-right:1px solid rgba(255,255,255,.1);}
 .stat-bar .stat:last-child{border-right:none;}
-.stat-bar .stat strong{display:block;font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold-light);}
+.stat-bar .stat strong{display:block;font-family:'Playfair Display',serif;font-size:1.85rem;color:var(--gold-light);}
 .stat-bar .stat span{font-size:.76rem;color:rgba(251,246,236,.7);}
 
-/* ════════════════════════════════
-   COACHES
-════════════════════════════════ */
-.coaches{padding:90px 0;}
-.coach-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:800px;margin:0 auto;}
-.coach-card{background:var(--white);border:1px solid rgba(22,35,58,.08);border-radius:14px;padding:24px;display:flex;gap:16px;align-items:center;}
-.coach-photo{width:74px;height:74px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--cream-2);}
-.coach-photo img{width:100%;height:100%;object-fit:cover;}
-.coach-card h3{font-size:1.05rem;margin-bottom:5px;}
-.coach-rating{display:inline-block;background:var(--gold);color:var(--navy-deep);font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:20px;margin-bottom:5px;}
-.coach-card p{font-size:.8rem;color:var(--ink-soft);}
+/* ── BRANCHES ── */
+.branches{padding:90px 0;background:var(--cream-2);}
+.branch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.branch-card{background:var(--white);border:1px solid rgba(22,35,58,.1);border-radius:14px;padding:26px;position:relative;transition:transform .25s,box-shadow .25s;}
+.branch-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px -14px rgba(22,35,58,.2);}
+.branch-card.coming-soon{border:2px solid var(--gold);background:linear-gradient(135deg,rgba(198,152,47,.06),var(--white));}
+.branch-status{position:absolute;top:16px;right:16px;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px;}
+.status-active{background:rgba(34,197,94,.12);color:#16a34a;}
+.status-soon{background:var(--gold);color:var(--navy-deep);}
+.branch-country{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:10px;}
+.country-in{background:rgba(255,153,51,.12);border:1px solid rgba(255,153,51,.35);color:#c05c00;}
+.country-us{background:rgba(60,114,194,.12);border:1px solid rgba(60,114,194,.35);color:#3c72c2;}
+.branch-card h3{font-size:1rem;color:var(--navy);margin-bottom:6px;}
+.branch-card p{font-size:.83rem;color:var(--ink-soft);line-height:1.65;margin-bottom:10px;}
+.branch-hours{font-size:.76rem;color:var(--ink-soft);margin-bottom:14px;}
+.branch-link{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);}
 
-/* ════════════════════════════════
-   TESTIMONIALS
-════════════════════════════════ */
-.testimonials{background:var(--cream-2);padding:90px 0;}
+/* ── COURSES ── */
+.courses{padding:90px 0;}
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.pricing-card{background:var(--white);border:1px solid rgba(22,35,58,.1);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;position:relative;transition:transform .25s,box-shadow .25s;}
+.pricing-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px -16px rgba(22,35,58,.22);}
+.pricing-card.featured{border:2px solid var(--gold);box-shadow:0 8px 32px -8px rgba(198,152,47,.3);}
+.popular-ribbon{position:absolute;top:14px;right:14px;background:var(--gold);color:var(--navy-deep);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px;}
+.pc-img{height:100px;overflow:hidden;}
+.pc-img img{width:100%;height:100%;object-fit:cover;}
+.pc-body{padding:20px 20px 0;}
+.pc-level{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.pc-name{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.pc-desc{font-size:.82rem;color:var(--ink-soft);margin-bottom:16px;line-height:1.55;}
+.pc-features{padding:0 20px;flex:1;}
+.pc-feature{font-size:.82rem;color:var(--ink-soft);padding:5px 0;display:flex;align-items:flex-start;gap:8px;border-bottom:1px solid rgba(22,35,58,.05);}
+.pc-feature:last-child{border-bottom:none;}
+.pc-feature .chk{color:var(--gold);flex-shrink:0;font-size:.75rem;}
+.pc-footer{padding:18px 20px 20px;}
+.pc-trial{font-size:.76rem;color:var(--gold);font-weight:600;margin-bottom:10px;}
+.btn-full{width:100%;justify-content:center;}
+
+/* ── COACHES ── */
+.coaches{padding:90px 0;background:var(--cream-2);}
+.coaches-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.coach-card{background:var(--white);border:1px solid rgba(22,35,58,.08);border-radius:14px;overflow:hidden;text-align:center;}
+.coach-photo-wrap{padding:24px 24px 12px;display:flex;flex-direction:column;align-items:center;gap:10px;}
+.coach-photo-wrap img{width:100px;height:100px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid rgba(198,152,47,.3);}
+.coach-avatar{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,rgba(198,152,47,.2),rgba(198,152,47,.06));border:3px solid rgba(198,152,47,.3);display:flex;align-items:center;justify-content:center;font-size:48px;}
+.coach-body{padding:0 20px 22px;}
+.coach-card h3{font-size:1.05rem;margin-bottom:4px;}
+.coach-title{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.coach-bio{font-size:.83rem;color:var(--ink-soft);margin-bottom:10px;line-height:1.55;}
+.coach-exp{font-size:.76rem;font-weight:600;color:var(--navy);background:rgba(22,35,58,.07);padding:4px 12px;border-radius:20px;}
+
+/* ── TESTIMONIALS ── */
+.testimonials{padding:90px 0;}
 .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.test-card{background:var(--white);border-radius:14px;padding:28px 24px;border:1px solid rgba(22,35,58,.06);}
+.test-card{background:var(--white);border-radius:14px;padding:28px 24px;border:1px solid rgba(22,35,58,.07);}
 .test-quote{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--gold);line-height:0;position:relative;top:12px;}
 .test-card p.quote-text{font-size:.9rem;color:var(--ink-soft);margin:6px 0 22px;}
 .test-person{display:flex;align-items:center;gap:11px;}
 .test-person img{width:44px;height:44px;border-radius:50%;object-fit:cover;}
+.test-avatar{width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--navy-deep);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;flex-shrink:0;}
 .test-person h4{font-size:.9rem;color:var(--navy);margin-bottom:1px;}
 .test-person span{font-size:.76rem;color:var(--ink-soft);}
-.stars{color:var(--gold);font-size:.8rem;margin-top:5px;}
+.stars{color:var(--gold);font-size:.8rem;margin-top:4px;}
 
-/* ════════════════════════════════
-   GALLERY
-════════════════════════════════ */
-.gallery{padding:90px 0;text-align:center;}
-.gallery-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:40px 0 0;}
-.gallery-grid a{border-radius:10px;overflow:hidden;aspect-ratio:1;display:block;}
-.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
-.gallery-grid a:hover img{transform:scale(1.06);}
-.gallery-cta{margin-top:34px;}
+/* ── GALLERY ── */
+.gallery{padding:90px 0;background:var(--cream-2);text-align:center;}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:40px 0 0;}
+.gallery-grid a{border-radius:12px;overflow:hidden;display:block;position:relative;}
+.gallery-grid img{width:100%;height:220px;object-fit:cover;transition:transform .4s;}
+.gallery-grid a:hover img{transform:scale(1.05);}
+.gallery-caption-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(15,26,43,.85));color:var(--cream);padding:32px 14px 14px;font-size:.78rem;text-align:left;opacity:0;transition:opacity .3s;}
+.gallery-grid a:hover .gallery-caption-overlay{opacity:1;}
+.gallery-caption-overlay strong{display:block;font-weight:600;margin-bottom:2px;}
+.gallery-caption-overlay span{font-size:.7rem;color:rgba(251,246,236,.7);}
+.gallery-cta{margin-top:36px;}
 
-/* ════════════════════════════════
-   CTA BANNER
-════════════════════════════════ */
-.cta-banner{
-  position:relative;
-  background:url('images/about-chess.jpg') center center / cover no-repeat;
-  overflow:hidden;
-}
-.cta-banner::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(15,26,43,.92) 50%,rgba(15,26,43,.78) 100%);
-}
+/* ── CTA BANNER ── */
+.cta-banner{position:relative;background:url('images/about-chess.jpg') center center/cover no-repeat;overflow:hidden;}
+.cta-banner::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,26,43,.92) 50%,rgba(15,26,43,.78) 100%);}
 .cta-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:80px 24px;}
-.cta-inner h2{color:var(--cream);font-size:2.2rem;margin-bottom:14px;}
+.cta-inner h2{color:var(--cream);font-size:2.1rem;margin-bottom:12px;}
 .cta-inner h2 .accent{color:var(--gold-light);font-style:italic;}
-.cta-inner p{color:rgba(251,246,236,.75);margin-bottom:28px;max-width:480px;}
+.cta-inner p{color:rgba(251,246,236,.75);margin-bottom:26px;max-width:480px;}
 .cta-btns{display:flex;gap:14px;flex-wrap:wrap;}
 
-/* ════════════════════════════════
-   FOOTER
-════════════════════════════════ */
+/* ── FOOTER ── */
 footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20px;}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:36px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08);}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08);}
 .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
 .footer-logo .name{color:var(--cream);font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;}
 .footer-col h4{color:var(--cream);font-size:.88rem;margin-bottom:16px;}
@@ -218,63 +195,52 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
 .footer-col li{margin-bottom:9px;font-size:.84rem;}
 .footer-col a:hover{color:var(--gold-light);}
 .footer-social{display:flex;gap:10px;margin-top:16px;}
-.footer-social a{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:.8rem;}
+.footer-social a{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;}
 .footer-social a:hover{background:var(--gold);border-color:var(--gold);color:var(--navy-deep);}
-.footer-bottom{padding-top:20px;text-align:center;font-size:.78rem;color:rgba(251,246,236,.4);}
+.footer-social svg{width:16px;height:16px;fill:currentColor;}
+.footer-bottom{padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:rgba(251,246,236,.4);flex-wrap:wrap;gap:8px;}
 
-/* ════════════════════════════════
-   TABLET ≤ 900px
-════════════════════════════════ */
+/* ── WHATSAPP FAB ── */
+.wa-fab{position:fixed;bottom:24px;right:24px;z-index:200;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.3);transition:transform .2s;}
+.wa-fab:hover{transform:scale(1.08);}
+.wa-fab svg{width:28px;height:28px;fill:#fff;}
+
+/* ════ TABLET ≤ 900px ════ */
 @media(max-width:900px){
-  /* NAV */
   .nav-links,.nav-demo-btn{display:none;}
   .burger{display:flex;}
-
-  /* HERO — stack: image top, text bottom */
   .hero{grid-template-columns:1fr;min-height:auto;}
   .hero-right{height:260px;}
-  .hero-right::after{background:rgba(15,26,43,.3);}
-  .hero-badge{bottom:16px;left:16px;}
   .hero-left{padding:36px 24px 48px;}
   .hero-left-inner h1{font-size:2.2rem;}
   .hero-left-inner p{max-width:100%;}
   .hero-btns{margin-bottom:28px;}
-  .hero-stats{grid-template-columns:repeat(2,1fr);}
-
-  /* SERVICES */
+  .hero-stats{grid-template-columns:repeat(2,1fr);gap:14px;}
   .service-grid{grid-template-columns:repeat(2,1fr);}
-
-  /* ABOUT — stack: image top, text bottom */
   .about{grid-template-columns:1fr;min-height:auto;}
   .about-right{height:260px;order:-1;}
   .about-left{padding:36px 24px 48px;}
-  .about-left-inner{max-width:100%;padding-bottom:0;}
-
-  /* STAT BAR */
-  .stat-bar{grid-template-columns:repeat(2,1fr);row-gap:22px;}
+  .about-left-inner{max-width:100%;}
+  .stat-bar{grid-template-columns:repeat(2,1fr);row-gap:20px;}
   .stat-bar .stat:nth-child(2){border-right:none;}
-
-  /* REST */
-  .coach-grid{grid-template-columns:1fr;max-width:400px;}
+  .branch-grid{grid-template-columns:1fr;}
+  .pricing-grid{grid-template-columns:repeat(2,1fr);}
+  .coaches-grid{grid-template-columns:repeat(2,1fr);}
   .test-grid{grid-template-columns:1fr;}
-  .gallery-grid{grid-template-columns:repeat(3,1fr);}
-  .footer-grid{grid-template-columns:1fr 1fr;}
-}
-
-/* ════════════════════════════════
-   MOBILE ≤ 480px
-════════════════════════════════ */
-@media(max-width:480px){
-  .hero-right{height:220px;}
-  .about-right{height:220px;}
-  .hero-left-inner h1{font-size:1.85rem;}
-  .section-title{font-size:1.6rem;}
-  .about-left-inner h2{font-size:1.8rem;}
-  .service-grid{grid-template-columns:1fr;}
   .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px;}
+}
+/* ════ MOBILE ≤ 480px ════ */
+@media(max-width:480px){
+  .hero-right,.about-right{height:220px;}
+  .hero-left-inner h1{font-size:1.85rem;}
+  .section-title{font-size:1.65rem;}
+  .service-grid,.pricing-grid,.coaches-grid{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr;}
-  .stat-bar .stat strong{font-size:1.5rem;}
   .container{padding:0 16px;}
+  .stat-bar .stat strong{font-size:1.5rem;}
+  .footer-bottom{flex-direction:column;text-align:center;}
 }
 </style>
 </head>
@@ -293,10 +259,9 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About Us</a></li>
-      <li><a href="#services">Courses</a></li>
+      <li><a href="#courses">Courses</a></li>
       <li><a href="#coaches">Coaches</a></li>
       <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
@@ -307,10 +272,9 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
   <nav class="mobile-nav" id="mobileNav">
     <a href="#home">Home</a>
     <a href="#about">About Us</a>
-    <a href="#services">Courses</a>
+    <a href="#courses">Courses</a>
     <a href="#coaches">Coaches</a>
     <a href="#gallery">Gallery</a>
-    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
     <a href="#contact" class="btn btn-gold" style="margin-top:8px;justify-content:center;">Book Free Demo</a>
   </nav>
@@ -320,23 +284,23 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
 <section class="hero" id="home">
   <div class="hero-left">
     <div class="hero-left-inner">
-      <span class="eyebrow">Welcome to Gupta Chess Academy</span>
-      <h1>Learn Today.<br><span class="accent">Lead Tomorrow.</span></h1>
-      <p>Professional chess training for all ages. Build skills, strategy and confidence — on and off the board.</p>
+      <div class="hero-badge-pill">♟ Trusted Chess Academy in Bangalore</div>
+      <h1>Master the Game<em>of Kings</em></h1>
+      <p>Join Gupta Chess Academy and transform your game with expert coaching, structured curriculum, and a passionate chess community — for all ages and skill levels.</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn btn-gold">Book Free Demo</a>
-        <a href="#services" class="btn btn-outline">Explore Courses</a>
+        <a href="#contact" class="btn btn-gold">Book Free Demo Class</a>
+        <a href="#courses" class="btn btn-outline">Explore Courses</a>
       </div>
       <div class="hero-stats">
-        <div><strong>FIDE-Rated</strong>Coaches</div>
         <div><strong>50+</strong>Students Trained</div>
         <div><strong>8+</strong>Years Experience</div>
-        <div><strong>Online &amp; Offline</strong>Classes</div>
+        <div><strong>2</strong>Expert Coaches</div>
+        <div><strong>15+</strong>Tournaments Entered</div>
       </div>
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-badge"><span class="dot"></span> Live class in session</div>
+    <div class="live-badge"><span class="dot"></span> Live class in session</div>
   </div>
 </section>
 
@@ -347,27 +311,28 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
       <span class="eyebrow">Our Services</span>
       <h2 class="section-title">How We Help You Succeed</h2>
       <div class="rule"></div>
+      <p class="section-sub">From first move to tournament podium — structured coaching for every level.</p>
     </div>
     <div class="service-grid">
       <div class="service-card">
         <div class="service-icon">♟</div>
         <h3>Chess Classes</h3>
-        <p>Structured classes for beginners to advanced players.</p>
+        <p>Structured beginner to advanced classes with monthly assessments and a free demo class included.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🏆</div>
         <h3>Tournament Training</h3>
-        <p>Special sessions to prepare students for local &amp; national tournaments.</p>
+        <p>Dedicated preparation for local, state &amp; national FIDE-rated tournaments.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">👥</div>
-        <h3>Personalized Coaching</h3>
-        <p>One-on-one sessions tailored to improve your unique game.</p>
+        <h3>1-on-1 Coaching</h3>
+        <p>Fully personalised sessions tailored to your game, schedule and tournament goals.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">💻</div>
         <h3>Online &amp; Offline</h3>
-        <p>Flexible learning options with world-class training anytime, anywhere.</p>
+        <p>Flexible in-person classes in Bangalore &amp; Mughalsarai, plus online sessions anywhere.</p>
       </div>
     </div>
   </div>
@@ -379,13 +344,14 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
     <div class="about-left-inner">
       <span class="eyebrow">About Us</span>
       <h2>Building Better Players<br>For A <span class="accent">Better Tomorrow</span></h2>
-      <p>At Gupta Chess Academy, we believe chess is more than a game — it's a way of thinking. Our mission is to help students develop critical thinking, patience, and confidence through chess.</p>
+      <p>At Gupta Chess Academy, we believe chess is more than a game — it's a way of thinking. Founded in Bangalore, our mission is to help students develop critical thinking, patience and confidence through chess — from ages 6 to adult.</p>
       <ul class="check-list">
-        <li><span class="tick">✓</span> Experienced &amp; FIDE-Rated Coaches</li>
-        <li><span class="tick">✓</span> Proven Teaching Methods</li>
-        <li><span class="tick">✓</span> Focus on Overall Development</li>
+        <li><span class="tick">✓</span> Experienced Coaches — 10+ &amp; 5+ years competitive play</li>
+        <li><span class="tick">✓</span> Structured curriculum with monthly assessments</li>
+        <li><span class="tick">✓</span> FIDE tournament guidance &amp; engine analysis</li>
+        <li><span class="tick">✓</span> Branches in Bangalore, Mughalsarai &amp; USA (coming soon)</li>
       </ul>
-      <a href="#coaches" class="btn btn-outline">Know More About Us</a>
+      <a href="#coaches" class="btn btn-outline">Meet Our Coaches</a>
     </div>
   </div>
   <div class="about-right"></div>
@@ -394,34 +360,188 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
 <!-- STAT BAR -->
 <div class="stat-bar">
   <div class="stat"><strong>50+</strong><span>Students Trained</span></div>
-  <div class="stat"><strong>15+</strong><span>Tournaments Conducted</span></div>
+  <div class="stat"><strong>15+</strong><span>Tournaments Entered</span></div>
   <div class="stat"><strong>8+</strong><span>Years Experience</span></div>
   <div class="stat"><strong>2</strong><span>Expert Coaches</span></div>
 </div>
+
+<!-- BRANCHES -->
+<section class="branches" id="branches">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Where to Find Us</span>
+      <h2 class="section-title">Our Branches</h2>
+      <div class="rule"></div>
+      <p class="section-sub">Training champions across India — and coming soon to the USA.</p>
+    </div>
+    <div class="branch-grid">
+      <div class="branch-card">
+        <span class="branch-status status-active">Active</span>
+        <span class="branch-country country-in">India</span>
+        <h3>Bangalore</h3>
+        <p>Splendid Skylines, Singasandra<br>Beside Teatree Hospital<br>Bangalore, Karnataka 560068</p>
+        <div class="branch-hours">⏰ Mon–Sun: 9 AM – 10 PM</div>
+        <a class="branch-link" href="https://maps.google.com/?q=Gupta+Chess+Academy+Singasandra+Bangalore" target="_blank" rel="noopener">Get Directions ↗</a>
+      </div>
+      <div class="branch-card">
+        <span class="branch-status status-active">Active</span>
+        <span class="branch-country country-in">India</span>
+        <h3>Mughalsarai, Chandauli</h3>
+        <p>Lot No. 2, Pani Tanki Road<br>Mughalsarai, Chandauli<br>Uttar Pradesh, India</p>
+        <div class="branch-hours">⏰ Mon–Sun: 9 AM – 10 PM</div>
+        <a class="branch-link" href="https://maps.google.com/?q=Pani+Tanki+Road+Mughalsarai+Chandauli" target="_blank" rel="noopener">Get Directions ↗</a>
+      </div>
+      <div class="branch-card coming-soon">
+        <span class="branch-status status-soon">🌟 Coming Soon</span>
+        <span class="branch-country country-us">USA</span>
+        <h3>United States of America</h3>
+        <p>We're expanding to the USA!<br>Stay tuned for location details<br>and opening announcements.</p>
+        <div class="branch-hours">⏰ Hours to be announced</div>
+        <span class="branch-link">Details Coming Soon ✦</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="courses" id="courses">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Our Programs</span>
+      <h2 class="section-title">Chess Courses &amp; Pricing</h2>
+      <div class="rule"></div>
+      <p class="section-sub">From absolute beginners to tournament-ready players — expert coaching tailored to your level. All courses include monthly assessments and a free demo class.</p>
+    </div>
+    <div class="pricing-grid">
+      <!-- BEGINNER -->
+      <div class="pricing-card">
+        <div class="pc-img"><img src="https://images.unsplash.com/photo-1580541832626-2a7131ee809f?w=400&h=160&fit=crop&q=80" alt="Beginner chess"></div>
+        <div class="pc-body">
+          <div class="pc-level">Beginner</div>
+          <div class="pc-name">Foundation</div>
+          <div class="pc-desc">Perfect for ages 6+ with no prior experience. Learn piece movements, notation &amp; basic checkmates.</div>
+        </div>
+        <div class="pc-features">
+          <div class="pc-feature"><span class="chk">♟</span>Piece movements &amp; board setup</div>
+          <div class="pc-feature"><span class="chk">♟</span>Chess notation &amp; rules</div>
+          <div class="pc-feature"><span class="chk">♟</span>Basic checkmates (K+Q, K+R)</div>
+          <div class="pc-feature"><span class="chk">♟</span>Opening principles (3 rules)</div>
+          <div class="pc-feature"><span class="chk">♟</span>Monthly assessment report</div>
+        </div>
+        <div class="pc-footer">
+          <div class="pc-trial">🎁 First class FREE — no commitment</div>
+          <a href="#contact" class="btn btn-outline btn-full">Enroll Now</a>
+        </div>
+      </div>
+      <!-- INTERMEDIATE -->
+      <div class="pricing-card featured">
+        <div class="popular-ribbon">Most Popular</div>
+        <div class="pc-img"><img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=400&h=160&fit=crop&q=80" alt="Intermediate chess"></div>
+        <div class="pc-body">
+          <div class="pc-level">Intermediate</div>
+          <div class="pc-name">Mastery</div>
+          <div class="pc-desc">For players who know the rules and want to seriously improve. Strategy, tactics &amp; opening repertoire.</div>
+        </div>
+        <div class="pc-features">
+          <div class="pc-feature"><span class="chk">♟</span>All Beginner topics included</div>
+          <div class="pc-feature"><span class="chk">♟</span>Tactical patterns (pins, forks, skewers)</div>
+          <div class="pc-feature"><span class="chk">♟</span>Positional play &amp; pawn structure</div>
+          <div class="pc-feature"><span class="chk">♟</span>Opening repertoire (white &amp; black)</div>
+          <div class="pc-feature"><span class="chk">♟</span>Lichess study access (shared)</div>
+        </div>
+        <div class="pc-footer">
+          <div class="pc-trial">🎁 First class FREE — no commitment</div>
+          <a href="#contact" class="btn btn-gold btn-full">Enroll Now</a>
+        </div>
+      </div>
+      <!-- ADVANCED -->
+      <div class="pricing-card">
+        <div class="pc-img"><img src="https://images.unsplash.com/photo-1611195974226-a6a9be9dd763?w=400&h=160&fit=crop&q=80" alt="Advanced chess"></div>
+        <div class="pc-body">
+          <div class="pc-level">Advanced</div>
+          <div class="pc-name">Pro &amp; Rated</div>
+          <div class="pc-desc">GM techniques &amp; engine analysis for rated players (ELO 1200+). Small batches for personalised attention.</div>
+        </div>
+        <div class="pc-features">
+          <div class="pc-feature"><span class="chk">♟</span>All Intermediate topics</div>
+          <div class="pc-feature"><span class="chk">♟</span>Complex endgame theory</div>
+          <div class="pc-feature"><span class="chk">♟</span>Engine &amp; Stockfish analysis</div>
+          <div class="pc-feature"><span class="chk">♟</span>FIDE tournament guidance</div>
+          <div class="pc-feature"><span class="chk">♟</span>Private Lichess study access</div>
+        </div>
+        <div class="pc-footer">
+          <div class="pc-trial">🎁 First class FREE — no commitment</div>
+          <a href="#contact" class="btn btn-outline btn-full">Enroll Now</a>
+        </div>
+      </div>
+      <!-- ELITE -->
+      <div class="pricing-card">
+        <div class="pc-img"><img src="https://images.unsplash.com/photo-1560174038-da43ac74f01b?w=400&h=160&fit=crop&q=80" alt="Elite chess"></div>
+        <div class="pc-body">
+          <div class="pc-level">Elite</div>
+          <div class="pc-name">Tournament 1-on-1</div>
+          <div class="pc-desc">Fully personalised 1-on-1 coaching for serious tournament aspirants. Tailored entirely to your game.</div>
+        </div>
+        <div class="pc-features">
+          <div class="pc-feature"><span class="chk">♟</span>Personalised curriculum</div>
+          <div class="pc-feature"><span class="chk">♟</span>Clock management &amp; psychology</div>
+          <div class="pc-feature"><span class="chk">♟</span>High-pressure match simulations</div>
+          <div class="pc-feature"><span class="chk">♟</span>Post-game analysis sessions</div>
+          <div class="pc-feature"><span class="chk">♟</span>Flexible schedule</div>
+        </div>
+        <div class="pc-footer">
+          <div class="pc-trial">🎁 First class FREE — no commitment</div>
+          <a href="#contact" class="btn btn-outline btn-full">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- COACHES -->
 <section class="coaches" id="coaches">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Our Coaches</span>
-      <h2 class="section-title">Learn From The Best</h2>
+      <span class="eyebrow">Meet the Team</span>
+      <h2 class="section-title">Our Expert Coaches</h2>
       <div class="rule"></div>
+      <p class="section-sub">Competitive players turned dedicated teachers — our coaches bring real tournament experience into every lesson.</p>
     </div>
-    <div class="coach-grid">
+    <div class="coaches-grid">
+      <!-- Minu Gupta -->
       <div class="coach-card">
-        <div class="coach-photo"><img src="https://images.unsplash.com/photo-1649433658557-54cf58577c68?w=300&q=80&auto=format&fit=crop" alt="GM Arjun Mehta"></div>
-        <div>
-          <h3>GM Arjun Mehta</h3>
-          <div><span class="coach-rating">FIDE Rating 2450</span></div>
-          <p>10+ Years Experience</p>
+        <div class="coach-photo-wrap">
+          <img src="images/founder-minu.jpg" alt="Minu Gupta – Founder">
+        </div>
+        <div class="coach-body">
+          <h3>Minu Gupta</h3>
+          <div class="coach-title">Founder</div>
+          <p class="coach-bio">The driving force behind Gupta Chess Academy. Founded the academy with a vision to nurture strategic thinkers and champion chess players across Bangalore.</p>
+          <span class="coach-exp">Academy Founder</span>
         </div>
       </div>
+      <!-- Ankit -->
       <div class="coach-card">
-        <div class="coach-photo"><img src="https://images.unsplash.com/photo-1778692258270-bc0e80e975c0?w=300&q=80&auto=format&fit=crop" alt="FM Kunal Singh"></div>
-        <div>
-          <h3>FM Kunal Singh</h3>
-          <div><span class="coach-rating">FIDE Rating 2100</span></div>
-          <p>5+ Years Experience</p>
+        <div class="coach-photo-wrap">
+          <img src="images/coach-ankit.jpg" alt="Ankit – Head Coach">
+        </div>
+        <div class="coach-body">
+          <h3>Ankit</h3>
+          <div class="coach-title">Founder &amp; Head Coach</div>
+          <p class="coach-bio">District championship finalist with 10+ years of competitive play. Specialises in opening theory and endgame mastery. Trained 50+ students across all levels.</p>
+          <span class="coach-exp">10+ Yrs Experience</span>
+        </div>
+      </div>
+      <!-- Sanskar -->
+      <div class="coach-card">
+        <div class="coach-photo-wrap">
+          <div class="coach-avatar">♚</div>
+        </div>
+        <div class="coach-body">
+          <h3>Sanskar Agrawal</h3>
+          <div class="coach-title">Co-Founder</div>
+          <p class="coach-bio">Rapid and Blitz specialist, rated 1800+ on Chess.com. Co-built the academy's curriculum and structure, ensuring every student gets a world-class learning experience.</p>
+          <span class="coach-exp">5+ Yrs Experience</span>
         </div>
       </div>
     </div>
@@ -439,26 +559,26 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
     <div class="test-grid">
       <div class="test-card">
         <div class="test-quote">&ldquo;</div>
-        <p class="quote-text">The coaching and guidance at Gupta Chess Academy is excellent. My child has improved a lot in a short time.</p>
+        <p class="quote-text">The coaching and guidance at Gupta Chess Academy is excellent. My child has improved a lot in a very short time. Highly recommended!</p>
         <div class="test-person">
-          <img src="https://images.unsplash.com/photo-1747264464985-2bc2e20c739e?w=200&q=80&auto=format&fit=crop" alt="Neha Kapoor">
+          <div class="test-avatar">N</div>
           <div><h4>Neha Kapoor</h4><span>Parent</span><div class="stars">★★★★★</div></div>
         </div>
       </div>
       <div class="test-card">
         <div class="test-quote">&ldquo;</div>
-        <p class="quote-text">The regular practice sessions and tournaments helped me improve my ratings and confidence significantly.</p>
+        <p class="quote-text">The regular practice sessions and tournaments helped me improve my ratings and confidence significantly. Best chess academy in Bangalore!</p>
         <div class="test-person">
-          <img src="https://images.unsplash.com/photo-1521870749737-92928aafcc21?w=200&q=80&auto=format&fit=crop" alt="Ritik Malhotra">
+          <div class="test-avatar">R</div>
           <div><h4>Ritik Malhotra</h4><span>Student</span><div class="stars">★★★★★</div></div>
         </div>
       </div>
       <div class="test-card">
         <div class="test-quote">&ldquo;</div>
-        <p class="quote-text">Best academy for chess learning! The coaches are very supportive and the environment is great.</p>
+        <p class="quote-text">Wonderful learning environment. The coaches are very patient and supportive. My daughter won her first tournament prize here!</p>
         <div class="test-person">
-          <img src="https://images.unsplash.com/photo-1598411435746-47bfecc3ea98?w=200&q=80&auto=format&fit=crop" alt="Arnav Desai">
-          <div><h4>Arnav Desai</h4><span>Student</span><div class="stars">★★★★★</div></div>
+          <div class="test-avatar">A</div>
+          <div><h4>Arnav Desai</h4><span>Parent</span><div class="stars">★★★★★</div></div>
         </div>
       </div>
     </div>
@@ -468,27 +588,45 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
 <!-- GALLERY -->
 <section class="gallery" id="gallery">
   <div class="container">
-    <span class="eyebrow">Gallery</span>
-    <h2 class="section-title">Moments From Our Chess Community</h2>
+    <span class="eyebrow">Our Moments</span>
+    <h2 class="section-title">Celebrating Our Students</h2>
+    <div class="rule"></div>
+    <p class="section-sub" style="margin-top:4px;">Victories and milestones — on and off the board.</p>
     <div class="gallery-grid">
-      <a href="#"><img src="https://images.unsplash.com/photo-1554924620-ac62a007715d?w=500&q=80&auto=format&fit=crop" alt="Coaching"></a>
-      <a href="#"><img src="https://images.unsplash.com/photo-1514820720301-4c4790309f46?w=500&q=80&auto=format&fit=crop" alt="Trophy"></a>
-      <a href="#"><img src="images/hero-chess.jpg" alt="Chess pieces"></a>
-      <a href="#"><img src="https://images.unsplash.com/photo-1667983088885-226788e18a6e?w=500&q=80&auto=format&fit=crop" alt="Board"></a>
-      <a href="#"><img src="https://images.unsplash.com/photo-1570989614585-581ee5f7e165?w=500&q=80&auto=format&fit=crop" alt="King"></a>
+      <a href="#">
+        <img src="images/gallery-tournament.jpg" alt="Tournament award">
+        <div class="gallery-caption-overlay">
+          <strong>Kaladarpana Rapid Chess — 2nd Prize (U-09 Girls)</strong>
+          <span>The Galleria, Yelahanka · Bangalore</span>
+        </div>
+      </a>
+      <a href="#">
+        <img src="images/hero-showcase-top.jpg" alt="National Amateur Chess Championships 2026">
+        <div class="gallery-caption-overlay">
+          <strong>National Amateur Chess Championships 2026</strong>
+          <span>Students competing at national level</span>
+        </div>
+      </a>
+      <a href="#">
+        <img src="images/hero-showcase-bottom.jpg" alt="Karnataka State U-11 Championship">
+        <div class="gallery-caption-overlay">
+          <strong>Karnataka State U-11 FIDE Rated Championship</strong>
+          <span>Trophy moment</span>
+        </div>
+      </a>
     </div>
-    <div class="gallery-cta"><a href="#" class="btn btn-outline">View More Photos</a></div>
+    <div class="gallery-cta"><a href="#contact" class="btn btn-outline">Join Us &amp; Make Memories</a></div>
   </div>
 </section>
 
-<!-- CTA BANNER -->
+<!-- CTA / CONTACT -->
 <section class="cta-banner" id="contact">
   <div class="cta-inner">
     <h2>Ready To Begin Your<br><span class="accent">Chess Journey?</span></h2>
-    <p>Join Gupta Chess Academy today and unlock your potential on and off the board.</p>
+    <p>Join Gupta Chess Academy today. First class is FREE — no commitment needed. Call us or WhatsApp to book your demo.</p>
     <div class="cta-btns">
-      <a href="#" class="btn btn-gold">Book Free Demo</a>
-      <a href="#" class="btn btn-outline-light">Contact Us</a>
+      <a href="https://wa.me/918660813472" target="_blank" rel="noopener" class="btn btn-gold">📱 WhatsApp Us</a>
+      <a href="tel:+918660813472" class="btn btn-outline-light">📞 +91 86608 13472</a>
     </div>
   </div>
 </section>
@@ -505,9 +643,21 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
             <span style="display:block;font-size:.55rem;letter-spacing:.14em;font-family:'Inter',sans-serif;color:rgba(251,246,236,.5);">CHESS ACADEMY</span>
           </div>
         </div>
-        <p style="font-size:.82rem;max-width:240px;">Empowering young minds through the game of chess.</p>
+        <p style="font-size:.82rem;max-width:240px;line-height:1.6;">Nurturing strategic minds and champions in Bangalore. Your journey to chess mastery starts here.</p>
+        <p style="font-size:.76rem;color:rgba(251,246,236,.4);margin-top:8px;line-height:1.6;">📍 Singasandra · HSR Layout · Kudlu Gate<br>Bangalore, Karnataka 560068</p>
         <div class="footer-social">
-          <a href="#">f</a><a href="#">◎</a><a href="#">▶</a>
+          <a href="https://www.youtube.com/@chesswithpurvi" target="_blank" rel="noopener" title="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61555168469213" target="_blank" rel="noopener" title="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/chesswithpurvi/" target="_blank" rel="noopener" title="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="https://wa.me/918660813472" target="_blank" rel="noopener" title="WhatsApp">
+            <svg viewBox="0 0 32 32"><path d="M16 .5C7.44.5.5 7.44.5 16c0 2.82.74 5.5 2.06 7.84L.5 31.5l7.86-2.04A15.43 15.43 0 0016 31.5C24.56 31.5 31.5 24.56 31.5 16S24.56.5 16 .5zm0 28.3a13.73 13.73 0 01-7-1.92l-.5-.3-5.18 1.35 1.38-5.04-.33-.52A13.72 13.72 0 012.2 16C2.2 8.38 8.38 2.2 16 2.2S29.8 8.38 29.8 16 23.62 28.8 16 28.8zm7.54-10.27c-.41-.2-2.44-1.2-2.82-1.34-.38-.14-.65-.2-.93.21-.27.41-1.07 1.34-1.31 1.62-.24.27-.48.3-.9.1-.41-.2-1.74-.64-3.31-2.04a12.4 12.4 0 01-2.29-2.85c-.24-.41-.03-.64.18-.84.19-.19.41-.48.62-.72.2-.24.27-.41.41-.69.14-.27.07-.51-.03-.72-.1-.2-.93-2.24-1.27-3.07-.34-.8-.68-.69-.93-.7h-.79c-.27 0-.72.1-1.1.51-.38.41-1.44 1.41-1.44 3.44s1.48 3.99 1.68 4.27c.2.27 2.9 4.43 7.03 6.21.98.42 1.75.67 2.35.86.99.31 1.89.27 2.6.16.79-.12 2.44-1 2.79-1.96.34-.96.34-1.78.24-1.96-.1-.18-.38-.27-.79-.48z"/></svg>
+          </a>
         </div>
       </div>
       <div class="footer-col">
@@ -515,35 +665,43 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Courses</a></li>
+          <li><a href="#courses">Courses</a></li>
           <li><a href="#coaches">Coaches</a></li>
           <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Our Programs</h4>
+        <h4>Our Courses</h4>
         <ul>
-          <li><a href="#">Chess Classes</a></li>
-          <li><a href="#">Tournament Training</a></li>
-          <li><a href="#">Personalized Coaching</a></li>
-          <li><a href="#">Online Classes</a></li>
-          <li><a href="#">Workshops</a></li>
+          <li><a href="#courses">Beginner Foundation</a></li>
+          <li><a href="#courses">Intermediate Mastery</a></li>
+          <li><a href="#courses">Advanced &amp; Pro</a></li>
+          <li><a href="#courses">Tournament 1-on-1</a></li>
+          <li><a href="#contact">Free Demo Class</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contact Us</h4>
         <ul>
-          <li>Harlur Road, Bangalore, Karnataka, India</li>
-          <li style="margin-top:8px;">+91 88716 42910</li>
-          <li style="margin-top:8px;">info@guptachessacademy.com</li>
+          <li>Splendid Skylines, Singasandra<br>Bangalore 560068, India</li>
+          <li style="margin-top:8px;">📞 <a href="tel:+918660813472">+91 86608 13472</a></li>
+          <li style="margin-top:8px;">✉️ <a href="mailto:chessmasterycoach@gmail.com">chessmasterycoach@gmail.com</a></li>
+          <li style="margin-top:8px;">🕐 Mon–Sat: 3 PM – 8 PM<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sun: 10 AM – 1 PM</li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2024 Gupta Chess Academy. All Rights Reserved.</div>
+    <div class="footer-bottom">
+      <p>© 2026 Gupta Chess Academy. All Rights Reserved.</p>
+      <span>Made with ♟ for chess lovers</span>
+    </div>
   </div>
 </footer>
+
+<!-- WhatsApp FAB -->
+<a class="wa-fab" href="https://wa.me/918660813472" target="_blank" rel="noopener" title="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 .5C7.44.5.5 7.44.5 16c0 2.82.74 5.5 2.06 7.84L.5 31.5l7.86-2.04A15.43 15.43 0 0016 31.5C24.56 31.5 31.5 24.56 31.5 16S24.56.5 16 .5zm0 28.3a13.73 13.73 0 01-7-1.92l-.5-.3-5.18 1.35 1.38-5.04-.33-.52A13.72 13.72 0 012.2 16C2.2 8.38 8.38 2.2 16 2.2S29.8 8.38 29.8 16 23.62 28.8 16 28.8zm7.54-10.27c-.41-.2-2.44-1.2-2.82-1.34-.38-.14-.65-.2-.93.21-.27.41-1.07 1.34-1.31 1.62-.24.27-.48.3-.9.1-.41-.2-1.74-.64-3.31-2.04a12.4 12.4 0 01-2.29-2.85c-.24-.41-.03-.64.18-.84.19-.19.41-.48.62-.72.2-.24.27-.41.41-.69.14-.27.07-.51-.03-.72-.1-.2-.93-2.24-1.27-3.07-.34-.8-.68-.69-.93-.7h-.79c-.27 0-.72.1-1.1.51-.38.41-1.44 1.41-1.44 3.44s1.48 3.99 1.68 4.27c.2.27 2.9 4.43 7.03 6.21.98.42 1.75.67 2.35.86.99.31 1.89.27 2.6.16.79-.12 2.44-1 2.79-1.96.34-.96.34-1.78.24-1.96-.1-.18-.38-.27-.79-.48z"/></svg>
+</a>
 
 <script>
 const burger = document.getElementById('burgerBtn');
