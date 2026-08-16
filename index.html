@@ -65,11 +65,11 @@ header{position:sticky;top:0;z-index:100;background:rgba(251,246,236,.95);backdr
 .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;border-top:1px solid rgba(22,35,58,.1);padding-top:22px;}
 .hero-stats div{font-size:.76rem;color:var(--ink-soft);font-weight:500;}
 .hero-stats strong{display:block;font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);margin-bottom:2px;}
-.hero-right{position:relative;background:url('images/hero-chess.jpg') center center/cover no-repeat;}
-.hero-right::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,26,43,.45) 0%,rgba(15,26,43,.65) 100%);}
-.live-badge{position:absolute;bottom:28px;left:28px;z-index:2;background:rgba(251,246,236,.96);padding:10px 16px;border-radius:9px;display:flex;align-items:center;gap:9px;font-size:.8rem;font-weight:600;color:var(--navy);box-shadow:0 8px 24px rgba(15,26,43,.18);}
-.live-badge .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;flex-shrink:0;animation:pulse 2s infinite;}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-right{position:relative;display:grid;grid-template-rows:1fr 1fr;gap:3px;background:var(--navy-deep);}
+.hero-right .showcase-img{position:relative;overflow:hidden;}
+.hero-right .showcase-img img{width:100%;height:100%;object-fit:cover;}
+.hero-right .showcase-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,26,43,0) 55%,rgba(15,26,43,.75) 100%);}
+.showcase-label{position:absolute;bottom:12px;left:14px;right:14px;z-index:2;color:var(--cream);font-size:.74rem;font-weight:600;line-height:1.3;}
 
 /* ── SERVICES ── */
 .services{padding:90px 0 80px;}
@@ -140,7 +140,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(251,246,236,.95);backdr
 
 /* ── COACHES ── */
 .coaches{padding:90px 0;background:var(--cream-2);}
-.coaches-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.coaches-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
 .coach-card{background:var(--white);border:1px solid rgba(22,35,58,.08);border-radius:14px;overflow:hidden;text-align:center;}
 .coach-photo-wrap{padding:24px 24px 12px;display:flex;flex-direction:column;align-items:center;gap:10px;}
 .coach-photo-wrap img{width:100px;height:100px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid rgba(198,152,47,.3);}
@@ -166,7 +166,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(251,246,236,.95);backdr
 
 /* ── GALLERY ── */
 .gallery{padding:90px 0;background:var(--cream-2);text-align:center;}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:40px 0 0;}
+.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:40px 0 0;}
 .gallery-grid a{border-radius:12px;overflow:hidden;display:block;position:relative;}
 .gallery-grid img{width:100%;height:220px;object-fit:cover;transition:transform .4s;}
 .gallery-grid a:hover img{transform:scale(1.05);}
@@ -175,6 +175,12 @@ header{position:sticky;top:0;z-index:100;background:rgba(251,246,236,.95);backdr
 .gallery-caption-overlay strong{display:block;font-weight:600;margin-bottom:2px;}
 .gallery-caption-overlay span{font-size:.7rem;color:rgba(251,246,236,.7);}
 .gallery-cta{margin-top:36px;}
+
+.map-section{padding:90px 0;text-align:center;}
+.map-embed{border-radius:14px;overflow:hidden;border:1px solid rgba(22,35,58,.1);box-shadow:0 20px 48px -20px rgba(15,26,43,.25);margin-top:40px;}
+.map-embed iframe{width:100%;height:360px;border:0;display:block;}
+.map-caption{font-size:.82rem;color:var(--ink-soft);margin-top:16px;}
+.map-caption a{color:var(--gold);font-weight:700;}
 
 /* ── CTA BANNER ── */
 .cta-banner{position:relative;background:url('images/about-chess.jpg') center center/cover no-repeat;overflow:hidden;}
@@ -204,6 +210,20 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
 .wa-fab{position:fixed;bottom:24px;right:24px;z-index:200;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.3);transition:transform .2s;}
 .wa-fab:hover{transform:scale(1.08);}
 .wa-fab svg{width:28px;height:28px;fill:#fff;}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,.8,.3,1),transform .7s cubic-bezier(.16,.8,.3,1);}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+.reveal-stagger > *{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.reveal-stagger.in-view > *{opacity:1;transform:translateY(0);}
+.reveal-stagger.in-view > *:nth-child(1){transition-delay:.05s;}
+.reveal-stagger.in-view > *:nth-child(2){transition-delay:.12s;}
+.reveal-stagger.in-view > *:nth-child(3){transition-delay:.19s;}
+.reveal-stagger.in-view > *:nth-child(4){transition-delay:.26s;}
+.reveal-stagger.in-view > *:nth-child(5){transition-delay:.33s;}
+@media(prefers-reduced-motion:reduce){
+  .reveal,.reveal-stagger > *{opacity:1!important;transform:none!important;transition:none!important;}
+}
 
 /* ════ TABLET ≤ 900px ════ */
 @media(max-width:900px){
@@ -299,19 +319,28 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
       </div>
     </div>
   </div>
-  <div class="hero-right"></div>
+  <div class="hero-right">
+    <div class="showcase-img">
+      <img src="images/hero-showcase-top.jpg" alt="National Amateur Chess Championships 2026 — students competing">
+      <div class="showcase-label">National Amateur Chess Championships 2026</div>
+    </div>
+    <div class="showcase-img">
+      <img src="images/hero-showcase-bottom.jpg" alt="Student receiving trophy at Karnataka State U-11 FIDE Rated Chess Championship">
+      <div class="showcase-label">Karnataka State U-11 FIDE Rated Championship</div>
+    </div>
+  </div>
 </section>
 
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Our Services</span>
       <h2 class="section-title">How We Help You Succeed</h2>
       <div class="rule"></div>
       <p class="section-sub">From first move to tournament podium — structured coaching for every level.</p>
     </div>
-    <div class="service-grid">
+    <div class="service-grid reveal-stagger">
       <div class="service-card">
         <div class="service-icon">♟</div>
         <h3>Chess Classes</h3>
@@ -339,7 +368,7 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-left">
-    <div class="about-left-inner">
+    <div class="about-left-inner reveal">
       <span class="eyebrow">About Us</span>
       <h2>Building Better Players<br>For A <span class="accent">Better Tomorrow</span></h2>
       <p>At Gupta Chess Academy, we believe chess is more than a game — it's a way of thinking. Founded in Bangalore, our mission is to help students develop critical thinking, patience and confidence through chess — from ages 6 to adult.</p>
@@ -356,7 +385,7 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
 </section>
 
 <!-- STAT BAR -->
-<div class="stat-bar">
+<div class="stat-bar reveal">
   <div class="stat"><strong>50+</strong><span>Students Trained</span></div>
   <div class="stat"><strong>15+</strong><span>Tournaments Entered</span></div>
   <div class="stat"><strong>8+</strong><span>Years Experience</span></div>
@@ -366,13 +395,13 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
 <!-- BRANCHES -->
 <section class="branches" id="branches">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Where to Find Us</span>
       <h2 class="section-title">Our Branches</h2>
       <div class="rule"></div>
       <p class="section-sub">Training champions across India — and coming soon to the USA.</p>
     </div>
-    <div class="branch-grid">
+    <div class="branch-grid reveal-stagger">
       <div class="branch-card">
         <span class="branch-status status-active">Active</span>
         <span class="branch-country country-in">India</span>
@@ -404,13 +433,13 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
 <!-- COURSES -->
 <section class="courses" id="courses">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Our Programs</span>
       <h2 class="section-title">Chess Courses &amp; Pricing</h2>
       <div class="rule"></div>
       <p class="section-sub">From absolute beginners to tournament-ready players — expert coaching tailored to your level. All courses include monthly assessments and a free demo class.</p>
     </div>
-    <div class="pricing-grid">
+    <div class="pricing-grid reveal-stagger">
       <!-- BEGINNER -->
       <div class="pricing-card">
         <div class="pc-img"><img src="https://images.unsplash.com/photo-1580541832626-2a7131ee809f?w=400&h=160&fit=crop&q=80" alt="Beginner chess"></div>
@@ -499,13 +528,13 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
 <!-- COACHES -->
 <section class="coaches" id="coaches">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Meet the Team</span>
       <h2 class="section-title">Our Expert Coaches</h2>
       <div class="rule"></div>
       <p class="section-sub">Competitive players turned dedicated teachers — our coaches bring real tournament experience into every lesson.</p>
     </div>
-    <div class="coaches-grid">
+    <div class="coaches-grid reveal-stagger">
       <!-- Minu Gupta -->
       <div class="coach-card">
         <div class="coach-photo-wrap">
@@ -530,7 +559,7 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
           <span class="coach-exp">10+ Yrs Experience</span>
         </div>
       </div>
-      <!-- Sanskar -->
+      <!-- Sanskar Agrawal -->
       <div class="coach-card">
         <div class="coach-photo-wrap">
           <div class="coach-avatar">♚</div>
@@ -542,6 +571,30 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
           <span class="coach-exp">5+ Yrs Experience</span>
         </div>
       </div>
+      <!-- Satyam Prakash -->
+      <div class="coach-card">
+        <div class="coach-photo-wrap">
+          <img src="images/coach-satyam.jpg" alt="Satyam Prakash – FIDE Rated Chess Coach">
+        </div>
+        <div class="coach-body">
+          <h3>Satyam Prakash</h3>
+          <div class="coach-title">FIDE Rated Chess Coach</div>
+          <p class="coach-bio">FIDE rated player with an impressive rating of 1847. Specialises in classical chess, strategic planning, and tournament preparation for competitive players.</p>
+          <span class="coach-exp">FIDE Rating: 1847</span>
+        </div>
+      </div>
+      <!-- Sindhu Vegi -->
+      <div class="coach-card">
+        <div class="coach-photo-wrap">
+          <img src="images/coach-sindhu.jpg" alt="Sindhu Vegi – Business Coordinator">
+        </div>
+        <div class="coach-body">
+          <h3>Sindhu Vegi</h3>
+          <div class="coach-title">Business Coordinator</div>
+          <p class="coach-bio">Manages academy operations, student enrollments, and scheduling. Ensures every student gets a smooth and seamless experience from inquiry to learning.</p>
+          <span class="coach-exp">Operations Lead</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -549,12 +602,12 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
 <!-- TESTIMONIALS -->
 <section class="testimonials" id="testimonials">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Testimonials</span>
       <h2 class="section-title">What Parents &amp; Students Say</h2>
       <div class="rule"></div>
     </div>
-    <div class="test-grid">
+    <div class="test-grid reveal-stagger">
       <div class="test-card">
         <div class="test-quote">&ldquo;</div>
         <p class="quote-text">The coaching and guidance at Gupta Chess Academy is excellent. My child has improved a lot in a very short time. Highly recommended!</p>
@@ -590,7 +643,14 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
     <h2 class="section-title">Celebrating Our Students</h2>
     <div class="rule"></div>
     <p class="section-sub" style="margin-top:4px;">Victories and milestones — on and off the board.</p>
-    <div class="gallery-grid">
+    <div class="gallery-grid reveal-stagger">
+      <a href="#">
+        <img src="images/gallery-medals.jpg" alt="Students with medals at 62nd BRDCA Open Rapid Chess Tournament">
+        <div class="gallery-caption-overlay">
+          <strong>62nd BRDCA Open &amp; Rapid Chess Tournament</strong>
+          <span>Multiple medal winners, under the auspices of KSCA</span>
+        </div>
+      </a>
       <a href="#">
         <img src="images/gallery-tournament.jpg" alt="Tournament award">
         <div class="gallery-caption-overlay">
@@ -614,6 +674,26 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
       </a>
     </div>
     <div class="gallery-cta"><a href="#contact" class="btn btn-outline">Join Us &amp; Make Memories</a></div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section" id="map">
+  <div class="container">
+    <span class="eyebrow">Find Us</span>
+    <h2 class="section-title">Visit Our Bangalore Branch</h2>
+    <div class="rule"></div>
+    <div class="map-embed reveal">
+      <iframe
+        title="Gupta Chess Academy Bangalore"
+        src="https://www.google.com/maps?q=Gupta+Chess+Academy+Singasandra+Bangalore+560068&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+      </iframe>
+    </div>
+    <p class="map-caption">
+      Splendid Skylines, Singasandra, Beside Teatree Hospital, Bangalore 560068 &nbsp;·&nbsp;
+      <a href="https://maps.google.com/?q=Gupta+Chess+Academy+Singasandra+Bangalore" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+    </p>
   </div>
 </section>
 
@@ -706,6 +786,18 @@ const burger = document.getElementById('burgerBtn');
 const mobileNav = document.getElementById('mobileNav');
 burger.addEventListener('click', () => mobileNav.classList.toggle('open'));
 mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+
+// Scroll reveal animations
+const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => revealObserver.observe(el));
 </script>
 </body>
 </html>
