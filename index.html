@@ -17,7 +17,6 @@
   --ink:#22201B;
   --ink-soft:#5C574D;
   --white:#FFFFFF;
-  --radius:14px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -35,6 +34,8 @@ img{display:block;max-width:100%;}
 .btn-gold:hover{background:var(--gold-light);}
 .btn-outline{border-color:var(--navy);color:var(--navy);background:transparent;}
 .btn-outline:hover{background:var(--navy);color:var(--white);}
+.btn-outline-white{border-color:rgba(255,255,255,.6);color:var(--white);background:transparent;}
+.btn-outline-white:hover{background:rgba(255,255,255,.15);}
 .btn-outline-light{border-color:rgba(255,255,255,.5);color:var(--white);background:transparent;}
 .btn-outline-light:hover{background:rgba(255,255,255,.12);border-color:var(--white);}
 
@@ -45,114 +46,130 @@ header{position:sticky;top:0;z-index:100;background:rgba(251,246,236,.95);backdr
 .logo-mark{width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;}
 .logo-text .name{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--navy);display:block;}
 .logo-text .sub{font-size:.58rem;letter-spacing:.16em;color:var(--ink-soft);text-transform:uppercase;}
-.nav-links{display:flex;gap:28px;list-style:none;font-size:.88rem;font-weight:500;}
+.nav-links{display:flex;gap:26px;list-style:none;font-size:.88rem;font-weight:500;}
 .nav-links a{color:var(--ink);}
 .nav-links a:hover{color:var(--gold);}
 .nav-right{display:flex;align-items:center;gap:12px;}
-.nav-demo{display:inline-flex;}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
 .burger span{width:22px;height:2px;background:var(--navy);border-radius:2px;display:block;}
-/* Mobile nav drawer */
 .mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);border-bottom:1px solid rgba(22,35,58,.1);padding:16px 24px 20px;flex-direction:column;gap:4px;z-index:99;}
 .mobile-nav.open{display:flex;}
 .mobile-nav a{display:block;padding:10px 0;font-size:.95rem;font-weight:500;color:var(--ink);border-bottom:1px solid rgba(22,35,58,.06);}
 .mobile-nav a:hover{color:var(--gold);}
 .mobile-nav a:last-child{border-bottom:none;}
 
-/* ── HERO ── */
-.hero{background:linear-gradient(160deg,var(--cream) 0%,var(--cream-2) 100%);}
-.hero-inner{max-width:1200px;margin:0 auto;padding:60px 24px 0;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
-.hero-text .eyebrow{margin-bottom:12px;}
-.hero-text h1{font-size:3rem;letter-spacing:-.01em;}
-.hero-text h1 .accent{color:var(--gold);font-style:italic;}
-.hero-text p{color:var(--ink-soft);font-size:1rem;margin:20px 0 28px;max-width:440px;}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px;}
-.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;border-top:1px solid rgba(22,35,58,.1);padding-top:22px;}
+/* ════════════════════════════════
+   HERO — two column: text left, full image right
+════════════════════════════════ */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:88vh;
+  overflow:hidden;
+}
+.hero-left{
+  background:linear-gradient(135deg,var(--cream) 0%,var(--cream-2) 100%);
+  display:flex;align-items:center;
+  padding:72px 56px 72px 5%;
+}
+.hero-left-inner{max-width:520px;}
+.hero-left-inner .eyebrow{margin-bottom:14px;}
+.hero-left-inner h1{font-size:3rem;letter-spacing:-.01em;margin-bottom:18px;}
+.hero-left-inner h1 .accent{color:var(--gold);font-style:italic;}
+.hero-left-inner p{color:var(--ink-soft);font-size:1rem;margin-bottom:30px;max-width:420px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px;}
+.hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 24px;border-top:1px solid rgba(22,35,58,.1);padding-top:24px;}
 .hero-stats div{font-size:.78rem;color:var(--ink-soft);font-weight:500;}
-.hero-stats strong{display:block;font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);margin-bottom:1px;}
+.hero-stats strong{display:block;font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--navy);margin-bottom:2px;}
 
-/* ── HERO IMAGE — desktop semi-circle ── */
-.hero-visual{position:relative;padding:7% 5% 4% 0;align-self:flex-end;}
-.hero-visual::before{
-  content:"";position:absolute;
-  top:-5%;right:-18%;width:90%;height:110%;
-  border-radius:50%;
-  background:radial-gradient(circle at 40% 35%,#1E3050 0%,var(--navy-deep) 75%);
-  z-index:0;
+/* RIGHT SIDE — pure background image */
+.hero-right{
+  position:relative;
+  background:url('images/hero-chess.jpg') center center / cover no-repeat;
 }
-.hero-visual::after{
-  content:"";position:absolute;
-  top:-9%;right:-22%;width:98%;height:118%;
-  border-radius:50%;
-  border:1.5px solid rgba(198,152,47,.35);
-  z-index:0;
+.hero-right::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(251,246,236,.18) 0%,rgba(15,26,43,.25) 100%);
 }
-.hero-img-wrap{position:relative;z-index:1;border-radius:18px;overflow:hidden;aspect-ratio:3/2.2;box-shadow:0 32px 64px -24px rgba(15,26,43,.6);}
-.hero-img-wrap img{width:100%;height:100%;object-fit:cover;}
-.hero-img-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,26,43,0) 50%,rgba(15,26,43,.45) 100%);}
-.hero-badge{position:absolute;bottom:18px;left:18px;z-index:2;background:rgba(251,246,236,.96);padding:10px 16px;border-radius:9px;display:flex;align-items:center;gap:9px;font-size:.8rem;font-weight:600;color:var(--navy);}
+.hero-badge{
+  position:absolute;bottom:28px;left:28px;z-index:2;
+  background:rgba(251,246,236,.95);
+  padding:11px 18px;border-radius:10px;
+  display:flex;align-items:center;gap:10px;
+  font-size:.82rem;font-weight:600;color:var(--navy);
+  box-shadow:0 8px 24px rgba(15,26,43,.18);
+}
 .hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;}
 
-/* ── SERVICES ── */
+/* ════════════════════════════════
+   SERVICES
+════════════════════════════════ */
 .services{padding:90px 0 80px;}
 .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
-.service-card{background:var(--white);border:1px solid rgba(22,35,58,.08);border-radius:var(--radius);padding:30px 22px;text-align:center;transition:transform .25s,box-shadow .25s;}
+.service-card{background:var(--white);border:1px solid rgba(22,35,58,.08);border-radius:14px;padding:30px 22px;text-align:center;transition:transform .25s,box-shadow .25s;}
 .service-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px -16px rgba(22,35,58,.22);}
 .service-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:1.4rem;}
 .service-card h3{font-size:1.08rem;margin-bottom:8px;}
 .service-card p{font-size:.86rem;color:var(--ink-soft);}
 
-/* ── ABOUT ── */
-.about{background:var(--white);padding:90px 0 0;}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
-.about-text h2{font-size:2.2rem;margin-bottom:18px;}
-.about-text h2 .accent{color:var(--gold);font-style:italic;}
-.about-text p{color:var(--ink-soft);margin-bottom:22px;}
+/* ════════════════════════════════
+   ABOUT — text left, full image right
+════════════════════════════════ */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:600px;
+  overflow:hidden;
+}
+.about-left{
+  background:var(--white);
+  display:flex;align-items:center;
+  padding:80px 56px 0 5%;
+}
+.about-left-inner{max-width:500px;padding-bottom:80px;}
+.about-left-inner .eyebrow{margin-bottom:12px;}
+.about-left-inner h2{font-size:2.2rem;margin-bottom:18px;}
+.about-left-inner h2 .accent{color:var(--gold);font-style:italic;}
+.about-left-inner p{color:var(--ink-soft);margin-bottom:22px;}
 .check-list{list-style:none;margin-bottom:28px;}
 .check-list li{display:flex;align-items:center;gap:11px;margin-bottom:13px;font-weight:500;color:var(--navy);font-size:.92rem;}
 .check-list .tick{width:21px;height:21px;border-radius:50%;background:var(--gold);color:var(--navy-deep);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;flex-shrink:0;}
 
-/* ── ABOUT IMAGE — desktop semi-circle (left side) ── */
-.about-visual{position:relative;padding:7% 0 4% 5%;}
-.about-visual::before{
-  content:"";position:absolute;
-  top:-5%;left:-18%;width:90%;height:110%;
-  border-radius:50%;
-  background:radial-gradient(circle at 60% 35%,var(--cream-2) 0%,#E4D9C5 75%);
-  z-index:0;
+/* RIGHT SIDE — pure background image */
+.about-right{
+  position:relative;
+  background:url('images/about-chess.jpg') center center / cover no-repeat;
 }
-.about-visual::after{
-  content:"";position:absolute;
-  top:-9%;left:-22%;width:98%;height:118%;
-  border-radius:50%;
-  border:1.5px solid rgba(198,152,47,.4);
-  z-index:0;
+.about-right::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(255,255,255,.12) 0%,rgba(15,26,43,.2) 100%);
 }
-.about-img-wrap{position:relative;z-index:1;border-radius:18px;overflow:hidden;aspect-ratio:3/2.2;box-shadow:0 32px 64px -24px rgba(15,26,43,.4);}
-.about-img-wrap img{width:100%;height:100%;object-fit:cover;}
 
-/* ── STAT BAR ── */
-.stat-bar{background:var(--navy);border-radius:16px;display:grid;grid-template-columns:repeat(4,1fr);padding:30px 16px;margin:64px 0 0;box-shadow:0 24px 48px -24px rgba(15,26,43,.4);}
+/* ── STAT BAR (sits below about) ── */
+.stat-bar{background:var(--navy);display:grid;grid-template-columns:repeat(4,1fr);padding:30px 16px;box-shadow:0 -4px 24px rgba(15,26,43,.15);}
 .stat-bar .stat{text-align:center;color:var(--cream);border-right:1px solid rgba(255,255,255,.1);}
 .stat-bar .stat:last-child{border-right:none;}
 .stat-bar .stat strong{display:block;font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold-light);}
 .stat-bar .stat span{font-size:.76rem;color:rgba(251,246,236,.7);}
-.about-pad{padding-bottom:90px;}
 
-/* ── COACHES ── */
+/* ════════════════════════════════
+   COACHES
+════════════════════════════════ */
 .coaches{padding:90px 0;}
 .coach-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:800px;margin:0 auto;}
-.coach-card{background:var(--white);border:1px solid rgba(22,35,58,.08);border-radius:var(--radius);padding:24px;display:flex;gap:16px;align-items:center;}
+.coach-card{background:var(--white);border:1px solid rgba(22,35,58,.08);border-radius:14px;padding:24px;display:flex;gap:16px;align-items:center;}
 .coach-photo{width:74px;height:74px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--cream-2);}
 .coach-photo img{width:100%;height:100%;object-fit:cover;}
 .coach-card h3{font-size:1.05rem;margin-bottom:5px;}
 .coach-rating{display:inline-block;background:var(--gold);color:var(--navy-deep);font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:20px;margin-bottom:5px;}
 .coach-card p{font-size:.8rem;color:var(--ink-soft);}
 
-/* ── TESTIMONIALS ── */
+/* ════════════════════════════════
+   TESTIMONIALS
+════════════════════════════════ */
 .testimonials{background:var(--cream-2);padding:90px 0;}
 .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.test-card{background:var(--white);border-radius:var(--radius);padding:28px 24px;border:1px solid rgba(22,35,58,.06);}
+.test-card{background:var(--white);border-radius:14px;padding:28px 24px;border:1px solid rgba(22,35,58,.06);}
 .test-quote{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--gold);line-height:0;position:relative;top:12px;}
 .test-card p.quote-text{font-size:.9rem;color:var(--ink-soft);margin:6px 0 22px;}
 .test-person{display:flex;align-items:center;gap:11px;}
@@ -161,7 +178,9 @@ header{position:sticky;top:0;z-index:100;background:rgba(251,246,236,.95);backdr
 .test-person span{font-size:.76rem;color:var(--ink-soft);}
 .stars{color:var(--gold);font-size:.8rem;margin-top:5px;}
 
-/* ── GALLERY ── */
+/* ════════════════════════════════
+   GALLERY
+════════════════════════════════ */
 .gallery{padding:90px 0;text-align:center;}
 .gallery-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:40px 0 0;}
 .gallery-grid a{border-radius:10px;overflow:hidden;aspect-ratio:1;display:block;}
@@ -169,106 +188,99 @@ header{position:sticky;top:0;z-index:100;background:rgba(251,246,236,.95);backdr
 .gallery-grid a:hover img{transform:scale(1.06);}
 .gallery-cta{margin-top:34px;}
 
-/* ── CTA BANNER ── */
-.cta-banner{background:var(--navy);}
-.cta-inner{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;max-width:1200px;margin:0 auto;padding:64px 24px;}
-.cta-inner h2{color:var(--cream);font-size:2rem;margin-bottom:12px;}
+/* ════════════════════════════════
+   CTA BANNER
+════════════════════════════════ */
+.cta-banner{
+  position:relative;
+  background:url('images/about-chess.jpg') center center / cover no-repeat;
+  overflow:hidden;
+}
+.cta-banner::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(15,26,43,.88) 50%,rgba(15,26,43,.55) 100%);
+}
+.cta-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:80px 24px;}
+.cta-inner h2{color:var(--cream);font-size:2.2rem;margin-bottom:14px;}
 .cta-inner h2 .accent{color:var(--gold-light);font-style:italic;}
-.cta-inner p{color:rgba(251,246,236,.72);margin-bottom:24px;}
+.cta-inner p{color:rgba(251,246,236,.75);margin-bottom:28px;max-width:480px;}
 .cta-btns{display:flex;gap:14px;flex-wrap:wrap;}
-.cta-img{border-radius:16px;overflow:hidden;aspect-ratio:16/10;}
-.cta-img img{width:100%;height:100%;object-fit:cover;}
 
-/* ── FOOTER ── */
+/* ════════════════════════════════
+   FOOTER
+════════════════════════════════ */
 footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20px;}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:36px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08);}
 .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
 .footer-logo .name{color:var(--cream);font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;}
-.footer-col h4{color:var(--cream);font-size:.88rem;margin-bottom:16px;letter-spacing:.02em;}
+.footer-col h4{color:var(--cream);font-size:.88rem;margin-bottom:16px;}
 .footer-col ul{list-style:none;}
 .footer-col li{margin-bottom:9px;font-size:.84rem;}
 .footer-col a:hover{color:var(--gold-light);}
 .footer-social{display:flex;gap:10px;margin-top:16px;}
 .footer-social a{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:.8rem;}
 .footer-social a:hover{background:var(--gold);border-color:var(--gold);color:var(--navy-deep);}
-.footer-bottom{padding-top:20px;text-align:center;font-size:.78rem;color:rgba(251,246,236,.45);}
+.footer-bottom{padding-top:20px;text-align:center;font-size:.78rem;color:rgba(251,246,236,.4);}
 
 /* ════════════════════════════════
-   TABLET  ≤ 960px
+   TABLET ≤ 900px
 ════════════════════════════════ */
-@media(max-width:960px){
-  .nav-links{display:none;}
-  .nav-demo{display:none;}
+@media(max-width:900px){
+  /* NAV */
+  .nav-links,.nav-demo-btn{display:none;}
   .burger{display:flex;}
 
-  .hero-inner{grid-template-columns:1fr;padding:40px 24px 0;gap:0;}
-  /* Image on TOP, text below */
-  .hero-visual{
-    order:0;
-    padding:0;
-    margin:0 auto;
-    width:90%;
-    max-width:420px;
-  }
-  /* Kill the circles on mobile */
-  .hero-visual::before,.hero-visual::after{display:none;}
-  .hero-img-wrap{aspect-ratio:4/3;border-radius:20px;}
-  .hero-text{order:1;padding:32px 0 40px;}
-  .hero-text h1{font-size:2.2rem;}
-  .hero-text p{max-width:100%;}
-  .hero-stats{grid-template-columns:repeat(2,1fr);gap:14px;}
+  /* HERO — stack: image top, text bottom */
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-right{height:260px;}
+  .hero-right::after{background:rgba(15,26,43,.3);}
+  .hero-badge{bottom:16px;left:16px;}
+  .hero-left{padding:36px 24px 48px;}
+  .hero-left-inner h1{font-size:2.2rem;}
+  .hero-left-inner p{max-width:100%;}
   .hero-btns{margin-bottom:28px;}
+  .hero-stats{grid-template-columns:repeat(2,1fr);}
 
+  /* SERVICES */
   .service-grid{grid-template-columns:repeat(2,1fr);}
 
-  .about-grid{grid-template-columns:1fr;gap:0;}
-  .about-visual{
-    order:0;
-    padding:0;
-    margin:0 auto 32px;
-    width:90%;
-    max-width:420px;
-  }
-  .about-visual::before,.about-visual::after{display:none;}
-  .about-img-wrap{aspect-ratio:4/3;border-radius:20px;}
-  .about-text{order:1;}
+  /* ABOUT — stack: image top, text bottom */
+  .about{grid-template-columns:1fr;min-height:auto;}
+  .about-right{height:260px;order:-1;}
+  .about-left{padding:36px 24px 48px;}
+  .about-left-inner{max-width:100%;padding-bottom:0;}
 
+  /* STAT BAR */
   .stat-bar{grid-template-columns:repeat(2,1fr);row-gap:22px;}
   .stat-bar .stat:nth-child(2){border-right:none;}
 
+  /* REST */
   .coach-grid{grid-template-columns:1fr;max-width:400px;}
   .test-grid{grid-template-columns:1fr;}
   .gallery-grid{grid-template-columns:repeat(3,1fr);}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:28px;}
-
-  .cta-inner{grid-template-columns:1fr;}
-  .cta-img{display:none;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
 }
 
 /* ════════════════════════════════
-   MOBILE  ≤ 540px
+   MOBILE ≤ 480px
 ════════════════════════════════ */
-@media(max-width:540px){
-  .nav{padding:12px 16px;}
-  .hero-visual{width:100%;}
-  .about-visual{width:100%;}
-  .hero-text h1{font-size:1.9rem;}
+@media(max-width:480px){
+  .hero-right{height:220px;}
+  .about-right{height:220px;}
+  .hero-left-inner h1{font-size:1.85rem;}
   .section-title{font-size:1.6rem;}
+  .about-left-inner h2{font-size:1.8rem;}
   .service-grid{grid-template-columns:1fr;}
   .gallery-grid{grid-template-columns:repeat(2,1fr);}
   .footer-grid{grid-template-columns:1fr;}
-  .stat-bar{grid-template-columns:repeat(2,1fr);}
-  .hero-stats{grid-template-columns:repeat(2,1fr);}
-  .about-text h2{font-size:1.8rem;}
+  .stat-bar .stat strong{font-size:1.5rem;}
   .container{padding:0 16px;}
-  .btn{padding:12px 20px;font-size:.88rem;}
-  .cta-btns{flex-direction:column;}
 }
 </style>
 </head>
 <body>
 
-<!-- ── NAV ── -->
+<!-- NAV -->
 <header>
   <nav class="nav">
     <a href="#" class="logo">
@@ -288,10 +300,8 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <a href="#contact" class="btn btn-gold nav-demo">Book Free Demo</a>
-      <button class="burger" id="burgerBtn" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="#contact" class="btn btn-gold nav-demo-btn">Book Free Demo</a>
+      <button class="burger" id="burgerBtn"><span></span><span></span><span></span></button>
     </div>
   </nav>
   <nav class="mobile-nav" id="mobileNav">
@@ -306,10 +316,10 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
   </nav>
 </header>
 
-<!-- ── HERO ── -->
+<!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-inner">
-    <div class="hero-text">
+  <div class="hero-left">
+    <div class="hero-left-inner">
       <span class="eyebrow">Welcome to Gupta Chess Academy</span>
       <h1>Learn Today.<br><span class="accent">Lead Tomorrow.</span></h1>
       <p>Professional chess training for all ages. Build skills, strategy and confidence — on and off the board.</p>
@@ -324,16 +334,13 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
         <div><strong>Online &amp; Offline</strong>Classes</div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-img-wrap">
-        <img src="images/hero-chess.jpg" alt="Gold and black chess pieces on the board">
-        <div class="hero-badge"><span class="dot"></span> Live class in session</div>
-      </div>
-    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-badge"><span class="dot"></span> Live class in session</div>
   </div>
 </section>
 
-<!-- ── SERVICES ── -->
+<!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
     <div class="section-head">
@@ -366,38 +373,33 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
   </div>
 </section>
 
-<!-- ── ABOUT ── -->
+<!-- ABOUT -->
 <section class="about" id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <span class="eyebrow">About Us</span>
-        <h2>Building Better Players<br>For A <span class="accent">Better Tomorrow</span></h2>
-        <p>At Gupta Chess Academy, we believe chess is more than a game — it's a way of thinking. Our mission is to help students develop critical thinking, patience, and confidence through chess.</p>
-        <ul class="check-list">
-          <li><span class="tick">✓</span> Experienced &amp; FIDE-Rated Coaches</li>
-          <li><span class="tick">✓</span> Proven Teaching Methods</li>
-          <li><span class="tick">✓</span> Focus on Overall Development</li>
-        </ul>
-        <a href="#coaches" class="btn btn-outline">Know More About Us</a>
-      </div>
-      <div class="about-visual">
-        <div class="about-img-wrap">
-          <img src="images/about-chess.jpg" alt="Black, gold and white chess set in warm light">
-        </div>
-      </div>
-    </div>
-    <div class="stat-bar">
-      <div class="stat"><strong>50+</strong><span>Students Trained</span></div>
-      <div class="stat"><strong>15+</strong><span>Tournaments Conducted</span></div>
-      <div class="stat"><strong>8+</strong><span>Years Experience</span></div>
-      <div class="stat"><strong>2</strong><span>Expert Coaches</span></div>
+  <div class="about-left">
+    <div class="about-left-inner">
+      <span class="eyebrow">About Us</span>
+      <h2>Building Better Players<br>For A <span class="accent">Better Tomorrow</span></h2>
+      <p>At Gupta Chess Academy, we believe chess is more than a game — it's a way of thinking. Our mission is to help students develop critical thinking, patience, and confidence through chess.</p>
+      <ul class="check-list">
+        <li><span class="tick">✓</span> Experienced &amp; FIDE-Rated Coaches</li>
+        <li><span class="tick">✓</span> Proven Teaching Methods</li>
+        <li><span class="tick">✓</span> Focus on Overall Development</li>
+      </ul>
+      <a href="#coaches" class="btn btn-outline">Know More About Us</a>
     </div>
   </div>
-  <div class="about-pad"></div>
+  <div class="about-right"></div>
 </section>
 
-<!-- ── COACHES ── -->
+<!-- STAT BAR -->
+<div class="stat-bar">
+  <div class="stat"><strong>50+</strong><span>Students Trained</span></div>
+  <div class="stat"><strong>15+</strong><span>Tournaments Conducted</span></div>
+  <div class="stat"><strong>8+</strong><span>Years Experience</span></div>
+  <div class="stat"><strong>2</strong><span>Expert Coaches</span></div>
+</div>
+
+<!-- COACHES -->
 <section class="coaches" id="coaches">
   <div class="container">
     <div class="section-head">
@@ -426,7 +428,7 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
   </div>
 </section>
 
-<!-- ── TESTIMONIALS ── -->
+<!-- TESTIMONIALS -->
 <section class="testimonials" id="testimonials">
   <div class="container">
     <div class="section-head">
@@ -463,40 +465,35 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
   </div>
 </section>
 
-<!-- ── GALLERY ── -->
+<!-- GALLERY -->
 <section class="gallery" id="gallery">
   <div class="container">
     <span class="eyebrow">Gallery</span>
     <h2 class="section-title">Moments From Our Chess Community</h2>
     <div class="gallery-grid">
-      <a href="#"><img src="https://images.unsplash.com/photo-1554924620-ac62a007715d?w=500&q=80&auto=format&fit=crop" alt="Coaching session"></a>
-      <a href="#"><img src="https://images.unsplash.com/photo-1514820720301-4c4790309f46?w=500&q=80&auto=format&fit=crop" alt="Tournament trophies"></a>
+      <a href="#"><img src="https://images.unsplash.com/photo-1554924620-ac62a007715d?w=500&q=80&auto=format&fit=crop" alt="Coaching"></a>
+      <a href="#"><img src="https://images.unsplash.com/photo-1514820720301-4c4790309f46?w=500&q=80&auto=format&fit=crop" alt="Trophy"></a>
       <a href="#"><img src="images/hero-chess.jpg" alt="Chess pieces"></a>
-      <a href="#"><img src="https://images.unsplash.com/photo-1667983088885-226788e18a6e?w=500&q=80&auto=format&fit=crop" alt="Chess board"></a>
-      <a href="#"><img src="https://images.unsplash.com/photo-1570989614585-581ee5f7e165?w=500&q=80&auto=format&fit=crop" alt="Chess king"></a>
+      <a href="#"><img src="https://images.unsplash.com/photo-1667983088885-226788e18a6e?w=500&q=80&auto=format&fit=crop" alt="Board"></a>
+      <a href="#"><img src="https://images.unsplash.com/photo-1570989614585-581ee5f7e165?w=500&q=80&auto=format&fit=crop" alt="King"></a>
     </div>
     <div class="gallery-cta"><a href="#" class="btn btn-outline">View More Photos</a></div>
   </div>
 </section>
 
-<!-- ── CTA BANNER ── -->
+<!-- CTA BANNER -->
 <section class="cta-banner" id="contact">
   <div class="cta-inner">
-    <div>
-      <h2>Ready To Begin Your<br><span class="accent">Chess Journey?</span></h2>
-      <p>Join Gupta Chess Academy today and unlock your potential on and off the board.</p>
-      <div class="cta-btns">
-        <a href="#" class="btn btn-gold">Book Free Demo</a>
-        <a href="#" class="btn btn-outline-light">Contact Us</a>
-      </div>
-    </div>
-    <div class="cta-img">
-      <img src="images/about-chess.jpg" alt="Chess set">
+    <h2>Ready To Begin Your<br><span class="accent">Chess Journey?</span></h2>
+    <p>Join Gupta Chess Academy today and unlock your potential on and off the board.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn btn-gold">Book Free Demo</a>
+      <a href="#" class="btn btn-outline-light">Contact Us</a>
     </div>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -505,7 +502,7 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
           <div class="logo-mark" style="background:var(--gold);color:var(--navy-deep);">G</div>
           <div>
             <span class="name">GUPTA</span>
-            <span style="display:block;font-size:.55rem;letter-spacing:.14em;font-family:'Inter',sans-serif;color:rgba(251,246,236,.55);">CHESS ACADEMY</span>
+            <span style="display:block;font-size:.55rem;letter-spacing:.14em;font-family:'Inter',sans-serif;color:rgba(251,246,236,.5);">CHESS ACADEMY</span>
           </div>
         </div>
         <p style="font-size:.82rem;max-width:240px;">Empowering young minds through the game of chess.</p>
@@ -551,13 +548,8 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
 <script>
 const burger = document.getElementById('burgerBtn');
 const mobileNav = document.getElementById('mobileNav');
-burger.addEventListener('click', () => {
-  mobileNav.classList.toggle('open');
-});
-// Close nav when a link is tapped
-mobileNav.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => mobileNav.classList.remove('open'));
-});
+burger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
 </script>
 </body>
 </html>
