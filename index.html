@@ -65,11 +65,8 @@ header{position:sticky;top:0;z-index:100;background:rgba(251,246,236,.95);backdr
 .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;border-top:1px solid rgba(22,35,58,.1);padding-top:22px;}
 .hero-stats div{font-size:.76rem;color:var(--ink-soft);font-weight:500;}
 .hero-stats strong{display:block;font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);margin-bottom:2px;}
-.hero-right{position:relative;display:grid;grid-template-rows:1fr 1fr;gap:3px;background:var(--navy-deep);}
-.hero-right .showcase-img{position:relative;overflow:hidden;}
-.hero-right .showcase-img img{width:100%;height:100%;object-fit:cover;}
-.hero-right .showcase-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,26,43,0) 55%,rgba(15,26,43,.75) 100%);}
-.showcase-label{position:absolute;bottom:12px;left:14px;right:14px;z-index:2;color:var(--cream);font-size:.74rem;font-weight:600;line-height:1.3;}
+.hero-right{position:relative;background:url('images/hero-chess.jpg') center center/cover no-repeat;}
+.hero-right::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,26,43,.45) 0%,rgba(15,26,43,.65) 100%);}
 
 /* ── SERVICES ── */
 .services{padding:90px 0 80px;}
@@ -319,16 +316,7 @@ footer{background:var(--navy-deep);color:rgba(251,246,236,.7);padding:60px 0 20p
       </div>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="showcase-img">
-      <img src="images/hero-showcase-top.jpg" alt="National Amateur Chess Championships 2026 — students competing">
-      <div class="showcase-label">National Amateur Chess Championships 2026</div>
-    </div>
-    <div class="showcase-img">
-      <img src="images/hero-showcase-bottom.jpg" alt="Student receiving trophy at Karnataka State U-11 FIDE Rated Chess Championship">
-      <div class="showcase-label">Karnataka State U-11 FIDE Rated Championship</div>
-    </div>
-  </div>
+  <div class="hero-right"></div>
 </section>
 
 <!-- SERVICES -->
